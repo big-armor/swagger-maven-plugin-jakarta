@@ -1,6 +1,5 @@
 package io.openapitools.swagger;
 
-import javax.ws.rs.core.Application;
 import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -15,6 +14,7 @@ import java.util.Set;
 import io.openapitools.swagger.config.SwaggerConfig;
 import io.swagger.v3.jaxrs2.Reader;
 import io.swagger.v3.oas.models.OpenAPI;
+import jakarta.ws.rs.core.Application;
 import org.apache.maven.artifact.DependencyResolutionRequiredException;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
@@ -155,7 +155,7 @@ public class GenerateMojo extends AbstractMojo {
         Class<?> clazz = ClassUtils.loadClass(applicationClass, Thread.currentThread().getContextClassLoader());
 
         if (clazz == null || !Application.class.isAssignableFrom(clazz)) {
-            getLog().warn("Provided application class does not implement javax.ws.rs.core.Application, skipping");
+            getLog().warn("Provided application class does not implement jakarta.ws.rs.core.Application, skipping");
             return null;
         }
 

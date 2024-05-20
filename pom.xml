@@ -4,13 +4,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <name>Swagger Maven Plugin</name>
-    <groupId>io.openapitools.swagger</groupId>
+    <groupId>com.bigarmor.swagger</groupId>
     <version>2.1.7-SNAPSHOT</version>
-    <artifactId>swagger-maven-plugin</artifactId>
+    <artifactId>swagger-jakarta-maven-plugin</artifactId>
     <packaging>maven-plugin</packaging>
 
-    <description>Maven plugin to generate OpenAPI documentation using Swagger.</description>
-    <url>https://github.com/openapi-tools/swagger-maven-plugin</url>
+    <description>Maven plugin to generate OpenAPI documentation using Swagger from Jakarta servlet APIs.</description>
+    <url>https://github.com/big-armor/swagger-jakarta-maven-plugin</url>
 
     <licenses>
         <license>
@@ -29,9 +29,9 @@
     </developers>
 
     <scm>
-        <connection>scm:git:https://github.com/openapi-tools/swagger-maven-plugin.git</connection>
-        <developerConnection>scm:git:https://github.com/openapi-tools/swagger-maven-plugin.git</developerConnection>
-        <url>https://github.com/openapi-tools/swagger-maven-plugin/tree/master</url>
+        <connection>scm:git:https://github.com/big-armor/swagger-maven-plugin-jakarta.git</connection>
+        <developerConnection>scm:git:https://github.com/big-armor/swagger-maven-plugin-jakarta.git</developerConnection>
+        <url>https://github.com/big-armor/swagger-maven-plugin-jakarta/tree/master</url>
         <tag>HEAD</tag>
     </scm>
 
@@ -58,26 +58,26 @@
         <io.openapitools.jackson.dataformat.version>1.0.8</io.openapitools.jackson.dataformat.version>
         <io.swagger.core.v3.version>2.1.7</io.swagger.core.v3.version>
         <javax.xml.bin.jaxb-api.version>2.3.0</javax.xml.bin.jaxb-api.version>
-        <javax.ws.rs.version>2.1</javax.ws.rs.version>
+        <jakarta.ws.rs.version>3.1.0</jakarta.ws.rs.version>
         <junit.version>4.13.1</junit.version>
         <org.apache.maven.maven-plugin-annotations.version>3.5</org.apache.maven.maven-plugin-annotations.version>
         <org.apache.maven.version>3.6.0</org.apache.maven.version>
         <org.apache.maven.plugin-testing.version>3.3.0</org.apache.maven.plugin-testing.version>
         <org.mockito.version>3.2.0</org.mockito.version>
-        <org.reflections.version>0.9.12</org.reflections.version>
+        <org.reflections.version>0.9.11</org.reflections.version>
         <org.slf4j.version>1.7.29</org.slf4j.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>io.swagger.core.v3</groupId>
-            <artifactId>swagger-jaxrs2</artifactId>
+            <artifactId>swagger-jaxrs2-jakarta</artifactId>
             <version>${io.swagger.core.v3.version}</version>
         </dependency>
         <dependency>
-            <groupId>javax.ws.rs</groupId>
-            <artifactId>javax.ws.rs-api</artifactId>
-            <version>${javax.ws.rs.version}</version>
+            <groupId>jakarta.ws.rs</groupId>
+            <artifactId>jakarta.ws.rs-api</artifactId>
+            <version>${jakarta.ws.rs.version}</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -191,7 +191,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-plugin-plugin</artifactId>
-                <version>3.5</version>
+                <version>3.6.0</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -226,7 +226,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-invoker-plugin</artifactId>
-                <version>3.2.0</version>
+                <version>3.6.1</version>
                 <executions>
                     <execution>
                         <id>integration-test</id>

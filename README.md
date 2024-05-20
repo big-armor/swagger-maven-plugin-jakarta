@@ -23,8 +23,8 @@ To have Swagger generate the OpenAPI specifications as part of the build add in 
   <plugins>
     ...
     <plugin>
-      <groupId>io.openapitools.swagger</groupId>
-      <artifactId>swagger-maven-plugin</artifactId>
+      <groupId>com.bigarmor.swagger</groupId>
+      <artifactId>swagger-jakarta-maven-plugin</artifactId>
       <configuration>
         <resourcePackages>
           <resourcePackage>io.openapitools.swagger.example</resourcePackage>
@@ -60,8 +60,8 @@ Most general properties of the Swagger model is configurable using the swaggerCo
 
 ```xml
 <plugin>
-  <groupId>io.openapitools.swagger</groupId>
-  <artifactId>swagger-maven-plugin</artifactId>
+  <groupId>com.bigarmor.swagger</groupId>
+  <artifactId>swagger-jakarta-maven-plugin</artifactId>
   <configuration>
     <swaggerConfig>
       <servers>
@@ -99,8 +99,8 @@ The generated OpenAPI specifications may be installed and deployed as Maven arti
 
 ```xml
 <plugin>
-  <groupId>io.openapitools.swagger</groupId>
-  <artifactId>swagger-maven-plugin</artifactId>
+  <groupId>com.bigarmor.swagger</groupId>
+  <artifactId>swagger-jakarta-maven-plugin</artifactId>
   <configuration>
     <attachSwaggerArtifact>true</attachSwaggerArtifact>
 ```

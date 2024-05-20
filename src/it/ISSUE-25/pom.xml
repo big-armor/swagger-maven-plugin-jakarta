@@ -11,9 +11,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>javax</groupId>
-            <artifactId>javaee-api</artifactId>
-            <version>8.0</version>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
+            <version>10.0.0</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -30,8 +30,8 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>io.openapitools.swagger</groupId>
-                <artifactId>swagger-maven-plugin</artifactId>
+                <groupId>com.bigarmor.swagger</groupId>
+                <artifactId>swagger-jakarta-maven-plugin</artifactId>
                 <version>@project.version@</version>
                 <configuration>
                     <resourcePackages>

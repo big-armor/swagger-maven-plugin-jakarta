@@ -12,8 +12,8 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>io.openapitools.swagger</groupId>
-                <artifactId>swagger-maven-plugin</artifactId>
+                <groupId>com.bigarmor.swagger</groupId>
+                <artifactId>swagger-jakarta-maven-plugin</artifactId>
                 <configuration>
                     <swaggerConfig>
                         <servers>
